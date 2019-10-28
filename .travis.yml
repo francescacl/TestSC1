@@ -2,10 +2,10 @@ language: java
 jdk:
 - openjdk8
 addons:
-sonarcloud:
-organization: francescacl
-token:
-secure: 5db2a3a77e6a486096b83758adf65d300caf758d
+    sonarcloud:
+        organization: francescacl
+        token:
+            secure: 5db2a3a77e6a486096b83758adf65d300caf758d
 script:
 - ant build
 - sonar-scanner
