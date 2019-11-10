@@ -3,7 +3,7 @@ import java.util.logging.Logger;
 
 public class Main {
 
-	private static java.lang.System.Logger logger = Logger.getLogger(Main.class.getName());
+	static java.lang.System.Logger logger = Logger.getLogger(Main.class.getName());
 	public static void main(String[] args) {
 		logger.log(Level.info, "Hello World.");
 	}
