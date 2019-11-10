@@ -1,6 +1,6 @@
 language: java
 jdk:
-- oracle-java8-installer
+- openjdk11
 addons:
     sonarcloud:
         organization: francescacl
