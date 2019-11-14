@@ -5,17 +5,12 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="HelloWorld">
     <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../usr/lib/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="11"/>
     <property name="source" value="11"/>
     <path id="HelloWorld.classpath">
         <pathelement location="bin"/>
-    </path>
-    <path id="run.Main (1).classpath">
-        <path refid="HelloWorld.classpath"/>
-    </path>
-    <path id="run.Main.classpath">
-        <path refid="HelloWorld.classpath"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -54,12 +49,12 @@
     </target>
     <target name="Main (1)">
         <java classname="prova.Main" failonerror="true" fork="yes">
-            <classpath refid="run.Main (1).classpath"/>
+            <classpath refid="HelloWorld.classpath"/>
         </java>
     </target>
     <target name="Main">
         <java classname="Main" failonerror="true" fork="yes">
-            <classpath refid="run.Main.classpath"/>
+            <classpath refid="HelloWorld.classpath"/>
         </java>
     </target>
 </project>
